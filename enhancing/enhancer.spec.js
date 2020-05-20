@@ -50,5 +50,7 @@ describe("get function",()=>{
         expect(enhancer.get({...item, enhancement: 0})).toEqual(item.name);
     })
 
-    
+    it("if enhancement level > 0, change the name to include [+ enhancement level number] before the item's name",()=>{
+        expect(enhancer.get({...item, enhancement: item.enhancement})).toEqual(`[+${item.enhancement}]${item.name}`)
+    })
 })
