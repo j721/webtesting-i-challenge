@@ -24,8 +24,7 @@ function fail(item) {
   }
 
   if(enhancement > 16){                   //enhancement level >16. enhancement decreases by 1
-    // enhancement --
-    enhancement - 1
+    enhancement --
   }
   return { ...item, enhancement, durability };
 }

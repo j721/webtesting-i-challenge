@@ -35,5 +35,12 @@ describe("fail function",()=>{
         expect(enhancer.fail(item)).toEqual({...item, durability: item.durability - 5 })
     })
 
+    it("if enhancement level >= 15, the durability of the item object should decrease by 10",()=>{
+        expect(enhancer.fail({...item, enhancement: 15 }))
+        .toEqual({...item,  enhancement: 15, durability: item.durability -10})
+    })
 
+    it("if enhancement level > 16, the enhancement level should decrease by 1, durability should decrease by 10" ,()=>{
+        expect(enhancer.fail({...item, enhancement: 17})).toEqual({...item, enhancement: 16, durability: item.durability -10})
+    })
 })
