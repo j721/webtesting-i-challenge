@@ -23,12 +23,15 @@ describe("success function", ()=>{
         expect(enhancer.succeed({...item, enhancement: 20})).toEqual({...item, enhancement: 20})
     })
 
-    it("durability should no decrease, even if enhancement level changes",()=>{
+    it("durability should not change, even if enhancement level changes",()=>{
         expect(enhancer.succeed({...item, durability: item.durability}))
         .toEqual({...item, enhancement: item.enhancement + 1, durability: item.durability})
     })
 })
     
+
+describe("fail function",()=>{
     it("should accept an object and return a new item object modified according to the client's rule for failure enhancment",()=>{
     
     })
+})
