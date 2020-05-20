@@ -23,7 +23,7 @@ function fail(item) {
     durability = durability -10         //enhancement level is 15 or more. then decrease durability by 10
   }
 
-  if(enhancement > 16){                   //enhancement level >16. enchament decreases by 1
+  if(enhancement > 16){                   //enhancement level >16. enhancement decreases by 1
     // enhancement --
     enhancement - 1
   }

@@ -31,7 +31,9 @@ describe("success function", ()=>{
     
 
 describe("fail function",()=>{
-    it("should accept an object and return a new item object modified according to the client's rule for failure enhancment",()=>{
-    
+    it("if enhancement level < 15, the durability of item should decrease by 5 ",()=>{
+        expect(enhancer.fail(item)).toEqual({...item, durability: item.durability - 5 })
     })
+
+
 })
