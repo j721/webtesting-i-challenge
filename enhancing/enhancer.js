@@ -39,5 +39,5 @@ function get(item) {
   if(enhancement > 0){
     name = `[+${enhancement}]${item.name}`
   }
-  return { ...item };
+  return name;
 }

@@ -44,3 +44,11 @@ describe("fail function",()=>{
         expect(enhancer.fail({...item, enhancement: 17})).toEqual({...item, enhancement: 16, durability: item.durability -10})
     })
 })
+
+describe("get function",()=>{
+    it("if enhancement level = 0, name is not modified",()=>{
+        expect(enhancer.get({...item, enhancement: 0})).toEqual(item.name);
+    })
+
+    
+})
